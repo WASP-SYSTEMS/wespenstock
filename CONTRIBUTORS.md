@@ -1,2 +1,2 @@
-Mischa Meier
-Maxim Shevchishin
+- Maxim Shevchishin
+- Mischa Meier
