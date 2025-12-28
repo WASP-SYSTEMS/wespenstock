@@ -1,0 +1,14 @@
+{
+    ".internal_only/cpv14/blobs/vuln_039.blob": {
+        "commit_introduced": "9c5e32dcd9779c4cfe48c5377d0af8adc52a2be9",
+        "src_path_rel": "src/nginx",
+        "sanitizer_id": "id_5",
+        "harness_name": "pov_harness",
+        "harness_id": "id_2",
+        "CWE": "CWE-125",
+        "discovery": "hard",
+        "patching": "easy",
+        "references": ["https://github.com/aixcc-public/challenge-004-nginx-cp/blob/main/.internal_only/cpv14/CPVINFO.md"],
+        "functions": ["ngx_http_script_regex_end_code"]
+    }
+}

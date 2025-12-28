@@ -1,0 +1,31 @@
+Qwen3-Coder:
+    path: /home/niklas/code/github.com/WASP-SYSTEMS/CRS-nik/test_series/nginx-test.json_2025-09-20T12:33:04.858131_Qwen3-Coder-30B-A3B-Instruct-FP8-t0.7
+    top_p: 1.0
+
+GPT-OSS-120b:
+    path: /home/niklas/code/github.com/WASP-SYSTEMS/CRS-nik/test_series/nginx-test.json_2025-09-20T12:33:20.295095_gpt-oss_120b-t1.0
+    top_p: 1.0
+
+mistral_7b:
+    path: /home/niklas/code/github.com/WASP-SYSTEMS/CRS-nik/test_series/nginx-test.json_2025-09-21T21:05:33.088274_mistral_7b-t0.7
+    top_p: 1.0
+
+mistral_nemo_12b:
+    path: /home/niklas/code/github.com/WASP-SYSTEMS/CRS-nik/test_series/nginx-test.json_2025-09-21T21:08:44.885103_mistral-nemo_12b-t0.7
+    top_p: 1.0
+
+deepseek_v3:
+    path: /home/niklas/code/github.com/WASP-SYSTEMS/CRS-nik/test_series/nginx-test.json_2025-09-27T16:21:29.833037_deepseek-v3.1_671b-t0.0
+    top_p: 0.95
+
+deepseek_r1:
+    path: /home/niklas/code/github.com/WASP-SYSTEMS/CRS-nik/test_series/nginx-test.json_2025-09-29T14:46:41.480289_deepseek-r1_671b-0528-q4_K_M-t0.0
+    top_p: 0.95
+
+llama4_maverik:
+    path: /home/niklas/code/github.com/WASP-SYSTEMS/CRS-nik/test_series/nginx-test.json_2025-09-25T14:11:28.028991_llama4-maverick-t0.0
+    top_p: 0.9
+
+mixtral:
+    path: /home/niklas/code/github.com/WASP-SYSTEMS/CRS-nik/test_series/nginx-test.json_2025-09-26T13:18:54.518010_mixtral_8x22b-t0.0
+    top_p: 0.9

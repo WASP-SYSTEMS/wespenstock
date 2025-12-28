@@ -1,0 +1,51 @@
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "crs"
+version = "3.0.0"
+description = "The WASPS Cyber Reasoning System"
+readme = "README.md"
+requires-python = ">=3.10"
+keywords = ["crs"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+
+  "Intended Audience :: Developers",
+  "Topic :: Software Development :: Quality Assurance",
+
+  "License :: OSI Approved :: MIT License",
+
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3 :: Only",
+]
+dynamic = ["dependencies", "optional-dependencies"]
+
+# pip install -e '.[dev]'
+[tool.setuptools.dynamic]
+dependencies = { file = ["requirements.txt"] }
+optional-dependencies = { dev = { file = ["requirements-dev.txt"] } }
+
+[project.urls]
+"Homepage" = "https://wasp.systems"
+
+[project.scripts]
+run_crs = "crs.main:main"
+eval_crs = "eval.evaluate_crs:main"
+inspect_eval = "eval.inspect_eval:main"
+prepare_project = "oss_fuzz_integration.prepare_project:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["crs*", "eval*", "oss_fuzz_integration*"]
+namespaces = false
+
+[tool.isort]
+profile = "black"
+force_single_line = "true"
+
+[tool.black]
+line-length = 120

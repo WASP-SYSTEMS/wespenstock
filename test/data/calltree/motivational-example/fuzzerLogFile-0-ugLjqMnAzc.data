@@ -1,0 +1,11 @@
+Call tree
+LLVMFuzzerTestOneInput /src/motivational-example/fuzz_project.c linenumber=-1
+  do_stuff /src/motivational-example/main_file.c linenumber=12
+    parse_request /src/motivational-example/main_file.c linenumber=57
+    sha1 /src/motivational-example/sample_lib.c linenumber=60
+      SHA1  linenumber=10
+    sha1_equal /src/motivational-example/sample_lib.c linenumber=60
+    handle_request /src/motivational-example/main_file.c linenumber=62
+    respond /src/motivational-example/main_file.c linenumber=63
+    free_request /src/motivational-example/main_file.c linenumber=66
+====================================

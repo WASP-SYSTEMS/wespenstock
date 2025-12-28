@@ -1,0 +1,36 @@
+services:
+
+  dind:
+    networks:
+      - crs-internal
+      - internet
+    expose:
+      - "2375"
+    image: docker:28-dind
+    command: ["dockerd", "-H", "tcp://0.0.0.0:2375", "--tls=false", "--storage-driver=overlay2"]
+    restart: no
+    privileged: true
+    environment:
+      - DOCKER_TLS_CERTDIR
+    volumes:
+      - ${PWD}:/workspace:rw
+
+  crs-tests:
+    restart: no
+    networks:
+      - crs-internal
+      - internet
+    build: .
+    image: our_test_image:latest
+    environment:
+      - DOCKER_HOST=tcp://dind:2375
+    command: ["/workspace/tests.sh"]
+    volumes:
+      - ${PWD}:/workspace:rw
+    depends_on:
+      - dind
+
+networks:
+  internet: {}
+  crs-internal:
+    internal: true

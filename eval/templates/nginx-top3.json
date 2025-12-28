@@ -1,0 +1,34 @@
+{
+    ".internal_only/cpv2/blobs/vuln_015.bin": {
+        "commit_introduced": "0dbd46415432759475e6e4bb5adfaada6fb7d506",
+        "src_path_rel": "src/nginx",
+        "sanitizer_id": "id_2",
+        "harness_name": "pov_harness",
+        "harness_id": "id_2",
+        "CWE": "CWE-122",
+        "references": ["https://github.com/aixcc-public/challenge-004-nginx-cp/blob/main/.internal_only/cpv2/CPVINFO.md"],
+        "functions": ["ngx_http_auth_basic_user"]
+    },
+    ".internal_only/cpv5/blobs/vuln_024.blob": {
+        "commit_introduced": "b101d59b3dda654dee1deabc34816e2ca7c96d38",
+        "src_path_rel": "src/nginx",
+        "sanitizer_id": "id_1",
+        "harness_name": "pov_harness",
+        "harness_id": "id_2",
+        "CWE": "CWE-476",
+        "references": ["https://github.com/aixcc-public/challenge-004-nginx-cp/blob/main/.internal_only/cpv5/CPVINFO.md"],
+        "functions": ["ngx_get_con_his", "ngx_http_get_last_ip_variable"]
+    },
+    ".internal_only/cpv8/blobs/vuln_027.blob": {
+        "commit_introduced": "cf6f5b1d4d85c98b4e2e2fb6f694f996d944851a",
+        "src_path_rel": "src/nginx",
+        "sanitizer_id": "id_2",
+        "harness_name": "mail_request_harness",
+        "harness_id": "id_1",
+        "CWE": "CWE-787",
+        "discovery": "easy",
+        "patching": "easy",
+        "references": ["https://github.com/aixcc-public/challenge-004-nginx-cp/blob/main/.internal_only/cpv8/CPVINFO.md"],
+        "functions": ["ngx_mail_pop3_user"]
+    }
+}

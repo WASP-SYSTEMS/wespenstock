@@ -1,0 +1,3 @@
+pairings:
+- executable_path: /workspace/out/libfuzzer-introspector-x86_64/fuzz_main_file
+  fuzzer_log_file: fuzzerLogFile-0-ugLjqMnAzc

@@ -1,0 +1,333 @@
+---
+Fuzzer filename: '/src/motivational-example/fuzz_project.c'
+All functions:
+  Function list name: All functions
+  Elements:
+    - functionName:    LLVMFuzzerTestOneInput
+      functionSourceFile: '/src/motivational-example/fuzz_project.c'
+      linkageType:     externalLinkage
+      functionLinenumber: 9
+      functionLinenumberEnd: 14
+      functionDepth:   0
+      returnType:      int
+      argCount:        2
+      argTypes:
+        - 'N/A'
+        - size_t
+      constantsTouched: []
+      argNames:
+        - data
+        - size
+      BBCount:         8
+      ICount:          46
+      EdgeCount:       10
+      CyclomaticComplexity: 4
+      functionsReached:
+        - do_stuff
+      functionUses:    0
+      BranchProfiles:
+        - Branch String:   'fuzz_project.c:10,7'
+          Branch Sides:
+            - BranchSide:      'fuzz_project.c:10,18'
+              BranchSideFuncs: []
+            - BranchSide:      'fuzz_project.c:11,20'
+              BranchSideFuncs:
+                - do_stuff
+        - Branch String:   'fuzz_project.c:11,7'
+          Branch Sides:
+            - BranchSide:      'fuzz_project.c:11,33'
+              BranchSideFuncs: []
+            - BranchSide:      'fuzz_project.c:12,12'
+              BranchSideFuncs:
+                - do_stuff
+      Callsites:
+        - Src:             'fuzz_project.c:12,3'
+          Dst:             do_stuff
+    - functionName:    do_stuff
+      functionSourceFile: '/src/motivational-example/main_file.c'
+      linkageType:     InternalLinkage
+      functionLinenumber: 56
+      functionLinenumberEnd: 67
+      functionDepth:   0
+      returnType:      void
+      argCount:        2
+      argTypes:
+        - 'N/A'
+        - size_t
+      constantsTouched: []
+      argNames:
+        - input
+        - size
+      BBCount:         9
+      ICount:          62
+      EdgeCount:       11
+      CyclomaticComplexity: 4
+      functionsReached:
+        - free_request
+        - handle_request
+        - parse_request
+        - respond
+        - sha1
+        - sha1_equal
+      functionUses:    1
+      BranchProfiles:
+        - Branch String:   'main_file.c:58,9'
+          Branch Sides:
+            - BranchSide:      'main_file.c:59,9'
+              BranchSideFuncs:
+                - sha1
+                - sha1_equal
+                - free_request
+                - handle_request
+                - respond
+                - free
+            - BranchSide:      'main_file.c:60,25'
+              BranchSideFuncs:
+                - sha1
+                - sha1_equal
+                - free_request
+                - handle_request
+                - respond
+                - free
+        - Branch String:   'main_file.c:60,9'
+          Branch Sides:
+            - BranchSide:      'main_file.c:62,37'
+              BranchSideFuncs:
+                - handle_request
+                - respond
+                - free
+                - free_request
+            - BranchSide:      'main_file.c:66,18'
+              BranchSideFuncs:
+                - free_request
+      Callsites:
+        - Src:             'main_file.c:57,27'
+          Dst:             parse_request
+        - Src:             'main_file.c:60,20'
+          Dst:             sha1
+        - Src:             'main_file.c:60,9'
+          Dst:             sha1_equal
+        - Src:             'main_file.c:62,22'
+          Dst:             handle_request
+        - Src:             'main_file.c:63,9'
+          Dst:             respond
+        - Src:             'main_file.c:66,5'
+          Dst:             free_request
+    - functionName:    parse_request
+      functionSourceFile: '/src/motivational-example/main_file.c'
+      linkageType:     InternalLinkage
+      functionLinenumber: 15
+      functionLinenumberEnd: 31
+      functionDepth:   0
+      returnType:      'N/A'
+      argCount:        2
+      argTypes:
+        - 'N/A'
+        - size_t
+      constantsTouched: []
+      argNames:
+        - input
+        - size
+      BBCount:         10
+      ICount:          88
+      EdgeCount:       13
+      CyclomaticComplexity: 5
+      functionsReached: []
+      functionUses:    1
+      BranchProfiles:
+        - Branch String:   'main_file.c:16,9'
+          Branch Sides:
+            - BranchSide:      'main_file.c:17,9'
+              BranchSideFuncs: []
+            - BranchSide:      'main_file.c:18,27'
+              BranchSideFuncs:
+                - malloc
+                - malloc
+                - free
+        - Branch String:   'main_file.c:19,9'
+          Branch Sides:
+            - BranchSide:      'main_file.c:20,9'
+              BranchSideFuncs:
+                - malloc
+                - free
+            - BranchSide:      'main_file.c:21,35'
+              BranchSideFuncs:
+                - malloc
+                - free
+        - Branch String:   'main_file.c:23,9'
+          Branch Sides:
+            - BranchSide:      'main_file.c:25,14'
+              BranchSideFuncs: []
+            - BranchSide:      'main_file.c:28,12'
+              BranchSideFuncs: []
+      Callsites:       []
+    - functionName:    handle_request
+      functionSourceFile: '/src/motivational-example/main_file.c'
+      linkageType:     InternalLinkage
+      functionLinenumber: 34
+      functionLinenumberEnd: 40
+      functionDepth:   0
+      returnType:      'N/A'
+      argCount:        1
+      argTypes:
+        - 'N/A'
+      constantsTouched: []
+      argNames:
+        - req
+      BBCount:         6
+      ICount:          47
+      EdgeCount:       7
+      CyclomaticComplexity: 3
+      functionsReached: []
+      functionUses:    1
+      BranchProfiles:
+        - Branch String:   'main_file.c:36,9'
+          Branch Sides:
+            - BranchSide:      'main_file.c:37,9'
+              BranchSideFuncs: []
+            - BranchSide:      'main_file.c:38,12'
+              BranchSideFuncs: []
+      Callsites:       []
+    - functionName:    respond
+      functionSourceFile: '/src/motivational-example/main_file.c'
+      linkageType:     InternalLinkage
+      functionLinenumber: 43
+      functionLinenumberEnd: 44
+      functionDepth:   0
+      returnType:      int
+      argCount:        2
+      argTypes:
+        - 'N/A'
+        - 'N/A'
+      constantsTouched: []
+      argNames:
+        - req
+        - data
+      BBCount:         1
+      ICount:          10
+      EdgeCount:       1
+      CyclomaticComplexity: 2
+      functionsReached: []
+      functionUses:    1
+      BranchProfiles:  []
+      Callsites:       []
+    - functionName:    free_request
+      functionSourceFile: '/src/motivational-example/main_file.c'
+      linkageType:     InternalLinkage
+      functionLinenumber: 48
+      functionLinenumberEnd: 53
+      functionDepth:   0
+      returnType:      void
+      argCount:        1
+      argTypes:
+        - 'N/A'
+      constantsTouched: []
+      argNames:
+        - req
+      BBCount:         6
+      ICount:          31
+      EdgeCount:       7
+      CyclomaticComplexity: 3
+      functionsReached: []
+      functionUses:    1
+      BranchProfiles:
+        - Branch String:   'main_file.c:49,9'
+          Branch Sides:
+            - BranchSide:      'main_file.c:50,9'
+              BranchSideFuncs:
+                - free
+                - free
+            - BranchSide:      'main_file.c:51,10'
+              BranchSideFuncs:
+                - free
+                - free
+      Callsites:       []
+    - functionName:    sha1_equal
+      functionSourceFile: '/src/motivational-example/sample_lib.c'
+      linkageType:     InternalLinkage
+      functionLinenumber: 15
+      functionLinenumberEnd: 27
+      functionDepth:   0
+      returnType:      int
+      argCount:        2
+      argTypes:
+        - 'N/A'
+        - 'N/A'
+      constantsTouched: []
+      argNames:
+        - a
+        - b
+      BBCount:         8
+      ICount:          49
+      EdgeCount:       9
+      CyclomaticComplexity: 3
+      functionsReached: []
+      functionUses:    1
+      BranchProfiles:
+        - Branch String:   'sample_lib.c:19,5'
+          Branch Sides:
+            - BranchSide:      'sample_lib.c:21,15'
+              BranchSideFuncs: []
+            - BranchSide:      'sample_lib.c:26,5'
+              BranchSideFuncs: []
+        - Branch String:   'sample_lib.c:21,13'
+          Branch Sides:
+            - BranchSide:      'sample_lib.c:23,13'
+              BranchSideFuncs: []
+            - BranchSide:      'sample_lib.c:25,5'
+              BranchSideFuncs: []
+      Callsites:       []
+    - functionName:    sha1
+      functionSourceFile: '/src/motivational-example/sample_lib.c'
+      linkageType:     InternalLinkage
+      functionLinenumber: 8
+      functionLinenumberEnd: 11
+      functionDepth:   0
+      returnType:      void
+      argCount:        3
+      argTypes:
+        - 'N/A'
+        - 'N/A'
+        - size_t
+      constantsTouched: []
+      argNames:
+        - buffer
+        - size
+        - ''
+      BBCount:         3
+      ICount:          23
+      EdgeCount:       3
+      CyclomaticComplexity: 2
+      functionsReached:
+        - SHA1
+      functionUses:    1
+      BranchProfiles:  []
+      Callsites:
+        - Src:             'sample_lib.c:10,5'
+          Dst:             SHA1
+    - functionName:    SHA1
+      functionSourceFile: ''
+      linkageType:     externalLinkage
+      functionLinenumber: -1
+      functionLinenumberEnd: 0
+      functionDepth:   0
+      returnType:      'N/A'
+      argCount:        3
+      argTypes:
+        - 'N/A'
+        - size_t
+        - 'N/A'
+      constantsTouched: []
+      argNames:
+        - ''
+        - ''
+        - ''
+      BBCount:         0
+      ICount:          0
+      EdgeCount:       0
+      CyclomaticComplexity: 2
+      functionsReached: []
+      functionUses:    1
+      BranchProfiles:  []
+      Callsites:       []
+...

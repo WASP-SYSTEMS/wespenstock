@@ -1,0 +1,175 @@
+{
+  "messages": [
+    {
+      "content": "This could be some LLM reasoning, to trigger this vulnerability:",
+      "additional_kwargs": {
+        "tool_calls": [
+          {
+            "index": 1,
+            "function": {
+              "arguments": "{\"python_code\": \"# Let's fail our testcase:\\nreproducer = [1, 2, 3]\"}",
+              "name": "generate_crashing_reproducer"
+            },
+            "id": "toolu_01V3U2mV3XQwYA6YPsMsYSx6",
+            "type": "function"
+          }
+        ]
+      },
+      "response_metadata": {
+        "token_usage": {
+          "completion_tokens": 473,
+          "prompt_tokens": 1921,
+          "total_tokens": 2394,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": {
+            "audio_tokens": null,
+            "cached_tokens": 0
+          },
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0
+        },
+        "model_group": "claude-3-5-sonnet-20241022",
+        "model_group_size": 1,
+        "deployment": "anthropic/claude-3-5-sonnet-20241022",
+        "model_info": {
+          "id": "6ebe0ec9ac7b1c0dab132f3eb291eab9cf0ea1549a5db0249ce8e578d16929c7",
+          "db_model": false
+        },
+        "api_base": null,
+        "caching_groups": null,
+        "hidden_params": {
+          "additional_headers": {
+            "x-ratelimit-limit-requests": "4000",
+            "x-ratelimit-remaining-requests": "3999",
+            "x-ratelimit-limit-tokens": "480000",
+            "x-ratelimit-remaining-tokens": "480000",
+            "llm_provider-date": "Mon, 14 Jul 2025 14:48:35 GMT",
+            "llm_provider-content-type": "application/json",
+            "llm_provider-transfer-encoding": "chunked",
+            "llm_provider-connection": "keep-alive",
+            "llm_provider-anthropic-ratelimit-requests-limit": "4000",
+            "llm_provider-anthropic-ratelimit-requests-remaining": "3999",
+            "llm_provider-anthropic-ratelimit-requests-reset": "2025-07-14T14:48:26Z",
+            "llm_provider-anthropic-ratelimit-input-tokens-limit": "400000",
+            "llm_provider-anthropic-ratelimit-input-tokens-remaining": "400000",
+            "llm_provider-anthropic-ratelimit-input-tokens-reset": "2025-07-14T14:48:28Z",
+            "llm_provider-anthropic-ratelimit-output-tokens-limit": "80000",
+            "llm_provider-anthropic-ratelimit-output-tokens-remaining": "80000",
+            "llm_provider-anthropic-ratelimit-output-tokens-reset": "2025-07-14T14:48:35Z",
+            "llm_provider-anthropic-ratelimit-tokens-limit": "480000",
+            "llm_provider-anthropic-ratelimit-tokens-remaining": "480000",
+            "llm_provider-anthropic-ratelimit-tokens-reset": "2025-07-14T14:48:28Z",
+            "llm_provider-request-id": "req_011CR76V1gr5M5SYgwXdqZ12",
+            "llm_provider-strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+            "llm_provider-anthropic-organization-id": "76abfad0-c3db-4a90-b81d-1ca8b5249c3d",
+            "llm_provider-via": "1.1 google",
+            "llm_provider-cf-cache-status": "DYNAMIC",
+            "llm_provider-x-robots-tag": "none",
+            "llm_provider-server": "cloudflare",
+            "llm_provider-cf-ray": "95f1d22cc831c7b7-DUS",
+            "llm_provider-content-encoding": "gzip",
+            "llm_provider-x-ratelimit-limit-requests": "4000",
+            "llm_provider-x-ratelimit-remaining-requests": "3999",
+            "llm_provider-x-ratelimit-limit-tokens": "480000",
+            "llm_provider-x-ratelimit-remaining-tokens": "480000",
+            "x-litellm-model-group": "claude-3-5-sonnet-20241022",
+            "x-litellm-attempted-retries": 0,
+            "x-litellm-attempted-fallbacks": 0
+          },
+          "optional_params": {
+            "temperature": 0.7,
+            "top_p": 1.0,
+            "n": 1,
+            "stream": false,
+            "tools": [
+              {
+                "type": "function",
+                "function": {
+                  "name": "generate_crashing_reproducer",
+                  "description": "This tool is the main interface for the creation of Python code snippets that output a reproducer in the form of a sequence of bytes or a string.The generated reproducer is automatically tested against the provided harness for potential crashes. The tool requires Python code, in which the final line assigns the generated reproducer to a variable named `reproducer`.\n\nUsage Instructions:\n- Provide valid Python code as input to the tool.\n- Ensure the code produces a reproducer of the desired type (bytes or string).\n- Assign the reproducer to the variable `reproducer` in the last line of the code.\n- Do NOT attempt to run the reproducer yourself. The tool will handle this for you.\n",
+                  "parameters": {
+                    "properties": {
+                      "python_code": {
+                        "description": "Expects a snippet of Python code that generates a reproducer in the form of bytes or a string. The output of this code is crucial for validation of the crash and must be assigned to a variable named `reproducer` in the last line. This allows for the automated evaluation of the reproducer against the provided harness to validate the crash.",
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "python_code"
+                    ],
+                    "type": "object"
+                  }
+                }
+              },
+              {
+                "type": "function",
+                "function": {
+                  "name": "GetSymbolDefinition",
+                  "description": "Retrieves and returns the complete definition of a specified symbol within a codebase, including its type, location, scope, and documentation if available. Ideal for quickly understanding symbol roles and usages.",
+                  "parameters": {
+                    "properties": {
+                      "symbol_name": {
+                        "description": "A string representing the name of the symbol to be retrieved. This parameter is used to locate the specific symbol within the codebase and return its full definition.",
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "symbol_name"
+                    ],
+                    "type": "object"
+                  }
+                }
+              },
+              {
+                "type": "function",
+                "function": {
+                  "name": "FindReferences",
+                  "description": "Allows you to identify all functions in the source code that utilize a specific symbol. To use this tool, you input the target symbol, and it returns a list of function names where the symbol appears. This is particularly useful for understanding symbol usage and dependencies in the codebase.",
+                  "parameters": {
+                    "properties": {
+                      "symbol_name": {
+                        "description": "Specifies the exact name of the symbol you want to search for in the source code. This parameter is case-sensitive and should match the symbol's name as used in the code to accurately retrieve all functions that reference it.",
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "symbol_name"
+                    ],
+                    "type": "object"
+                  }
+                }
+              }
+            ],
+            "max_retries": 0,
+            "logprobs": true
+          },
+          "litellm_call_id": "b3fab147-402d-4375-a5e3-5ca836c8600c",
+          "api_base": null,
+          "model_id": "6ebe0ec9ac7b1c0dab132f3eb291eab9cf0ea1549a5db0249ce8e578d16929c7",
+          "response_cost": 0.012858000000000001,
+          "litellm_model_name": "anthropic/claude-3-5-sonnet-20241022"
+        },
+        "finish_reason": "tool_calls"
+      },
+      "type": "ai",
+      "name": null,
+      "id": "run--77706242-829a-4539-95d1-3707909f5af1-0",
+      "example": false,
+      "tool_calls": [
+        {
+          "name": "generate_crashing_reproducer",
+          "args": {
+            "python_code": "# Create a buffer with:\n# - First 4 bytes: size value under 1024 (to pass the harness check)\n# - Next 16 bytes: some data that will be part of the SHA1 calculation\n# - Last 20 bytes: fake SHA1 hash that will match our data\n# We'll make data_size large to trigger a heap overflow\n\n# Create base structure\nsize_value = 100  # Value under 1024 to pass the check\nsize_bytes = size_value.to_bytes(4, byteorder='little')\n\n# Create main data part (16 bytes)\ndata_part = b'A' * 16\n\n# Create a matching SHA1 hash (20 bytes)\nfake_hash = b'B' * 20\n\n# Combine all parts\nreproducer = size_bytes + data_part + fake_hash"
+          },
+          "id": "toolu_01V3U2mV3XQwYA6YPsMsYSx6",
+          "type": "tool_call"
+        }
+      ],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  ],
+  "processed_tools": [],
+  "temperature": 0.7,
+  "top_p": 1.0
+}

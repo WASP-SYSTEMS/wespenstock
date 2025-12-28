@@ -1,0 +1,24 @@
+auto_ccs:
+    - s6chgero@uni-bonn.de
+cp_name: motivational-example
+cp_sources:
+    motivational-example:
+        address: https://github.com/WASP-SYSTEMS/motivational-example
+        ref: main
+harnesses:
+    fuzz_main_file:
+        binary: out/fuzz_main_file
+        name: fuzz_main_file
+        source: src/motivational-example/fuzz_project.c
+khomepage: https://github.com/WASP-SYSTEMS/motivational-example
+language: c
+main_repo: https://github.com/WASP-SYSTEMS/motivational-example
+primary_contact: meierm@cs.uni-bonn.de
+sanitizers:
+    id_1: "AddressSanitizer: heap-buffer-overflow"
+    id_2: "AddressSanitizer: stack-buffer-overflow"
+    id_3: "AddressSanitizer: global-buffer-overflow"
+    id_4: "AddressSanitizer: SEGV"
+    id_5: "AddressSanitizer: attempting double-free"
+    id_6: "AddressSanitizer: heap-use-after-free"
+src_path: src/motivational-example/
