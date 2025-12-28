@@ -4,7 +4,7 @@ jedi==0.19.2
 langchain_community==0.3.29
 langgraph==0.6.7
 libclang==18.1.1
-litellm==1.77.1
+litellm==1.80.11
 lxml==6.0.2
 numpy==2.2.6
 ollama==0.5.3
