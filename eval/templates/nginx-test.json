@@ -1,0 +1,160 @@
+{
+    ".internal_only/cpv1/blobs/vuln_014.bin": {
+        "commit_introduced": "d030af5eb4c64470c8fd5a87a8f6aae547580aa3",
+        "src_path_rel": "src/nginx",
+        "sanitizer_id": "id_2",
+        "harness_name": "pov_harness",
+        "harness_id": "id_2",
+        "CWE": "CWE-787",
+        "references": ["https://github.com/aixcc-public/challenge-004-nginx-cp/blob/main/.internal_only/cpv1/CPVINFO.md"],
+        "functions": ["ngx_http_validate_from"]
+    },
+    ".internal_only/cpv2/blobs/vuln_015.bin": {
+        "commit_introduced": "0dbd46415432759475e6e4bb5adfaada6fb7d506",
+        "src_path_rel": "src/nginx",
+        "sanitizer_id": "id_2",
+        "harness_name": "pov_harness",
+        "harness_id": "id_2",
+        "CWE": "CWE-122",
+        "references": ["https://github.com/aixcc-public/challenge-004-nginx-cp/blob/main/.internal_only/cpv2/CPVINFO.md"],
+        "functions": ["ngx_http_auth_basic_user"]
+    },
+    ".internal_only/cpv3/blobs/vuln_022.bin": {
+        "commit_introduced": "c502a1695c0e9d0345101a5f2a99ee0e3c890a4d",
+        "src_path_rel": "src/nginx",
+        "sanitizer_id": "id_2",
+        "harness_name": "pov_harness",
+        "harness_id": "id_2",
+        "CWE": "CWE-787",
+        "references": ["https://github.com/aixcc-public/challenge-004-nginx-cp/blob/main/.internal_only/cpv3/CPVINFO.md"],
+        "functions": ["ngx_http_trace_handler"]
+    },
+    ".internal_only/cpv10/blobs/vuln_031.blob": {
+        "commit_introduced": "dcf9f055bf1863555869493d5ac5944b5327f128",
+        "src_path_rel": "src/nginx",
+        "sanitizer_id": "id_3",
+        "harness_name": "pov_harness",
+        "harness_id": "id_2",
+        "CWE": "CWE-415",
+        "discovery": "hard",
+        "patching": "easy",
+        "references": ["https://github.com/aixcc-public/challenge-004-nginx-cp/blob/main/.internal_only/cpv10/CPVINFO.md"],
+        "functions": ["ngx_http_process_prefer"]
+    },
+    ".internal_only/cpv11/blobs/vuln_032.blob": {
+        "commit_introduced": "a2f5fad3ef16615ed23d21264560748cdc21a385",
+        "src_path_rel": "src/nginx",
+        "sanitizer_id": "id_4",
+        "harness_name": "pov_harness",
+        "harness_id": "id_2",
+        "CWE": "CWE-416",
+        "discovery": "hard",
+        "patching": "medium",
+        "references": ["https://github.com/aixcc-public/challenge-004-nginx-cp/blob/main/.internal_only/cpv11/CPVINFO.md"],
+        "functions": ["ngx_init_cycle"]
+    },
+    ".internal_only/cpv12/blobs/vuln_036.blob": {
+        "commit_introduced": "348b50dbb52e7d6faad7d75ce9331dd9860131c4",
+        "src_path_rel": "src/nginx",
+        "sanitizer_id": "id_2",
+        "harness_name": "pov_harness",
+        "harness_id": "id_2",
+        "CWE": "CWE-122",
+        "discovery": "easy",
+        "patching": "easy",
+        "references": ["https://github.com/aixcc-public/challenge-004-nginx-cp/blob/main/.internal_only/cpv12/CPVINFO.md"],
+        "functions": ["ngx_sendfile_r"]
+    },
+    ".internal_only/cpv13/blobs/vuln_037.blob": {
+        "commit_introduced": "316d57f895c4c915c5ce3af8b09972d47dd9984e",
+        "src_path_rel": "src/nginx",
+        "sanitizer_id": "id_1",
+        "harness_name": "mail_request_harness",
+        "harness_id": "id_1",
+        "CWE": "CWE-476",
+        "discovery": "medium",
+        "patching": "easy",
+        "references": ["https://github.com/aixcc-public/challenge-004-nginx-cp/blob/main/.internal_only/cpv13/CPVINFO.md"],
+        "functions": ["ngx_mail_pop3_pass", "ngx_mail_pop3_logs"]
+    },
+    ".internal_only/cpv14/blobs/vuln_039.blob": {
+        "commit_introduced": "9c5e32dcd9779c4cfe48c5377d0af8adc52a2be9",
+        "src_path_rel": "src/nginx",
+        "sanitizer_id": "id_5",
+        "harness_name": "pov_harness",
+        "harness_id": "id_2",
+        "CWE": "CWE-125",
+        "discovery": "hard",
+        "patching": "easy",
+        "references": ["https://github.com/aixcc-public/challenge-004-nginx-cp/blob/main/.internal_only/cpv14/CPVINFO.md"],
+        "functions": ["ngx_http_script_regex_end_code"]
+    },
+    ".internal_only/cpv15/blobs/vuln_050.blob": {
+        "commit_introduced": "ef970a54395324307fffd11ab37266479ac37d4c",
+        "src_path_rel": "src/nginx",
+        "sanitizer_id": "id_1",
+        "harness_name": "pov_harness",
+        "harness_id": "id_2",
+        "CWE": "CWE-787",
+        "discovery": "easy",
+        "patching": "easy",
+        "references": ["https://github.com/aixcc-public/challenge-004-nginx-cp/blob/main/.internal_only/cpv15/CPVINFO.md"],
+        "functions": ["ngx_http_userid_get_uid"]
+    },
+    ".internal_only/cpv17/blobs/vuln_038.blob": {
+        "commit_introduced": "b6c0a37554e300aa230ea2b8d7fe53dd8604f602",
+        "src_path_rel": "src/nginx",
+        "sanitizer_id": "id_4",
+        "harness_name": "smtp_harness",
+        "harness_id": "id_3",
+        "CWE": "CWE-416",
+        "discovery": "hard",
+        "patching": "easy",
+        "references": ["https://github.com/aixcc-public/challenge-004-nginx-cp/blob/main/.internal_only/cpv17/CPVINFO.md"],
+        "functions": ["ngx_mail_smtp_noop"]
+    },
+    ".internal_only/cpv4/blobs/vuln_023.blob": {
+        "commit_introduced": "b9d6a2caf41565fb05c010ad0c8d2fd6bd3c4c42",
+        "src_path_rel": "src/nginx",
+        "sanitizer_id": "id_2",
+        "harness_name": "pov_harness",
+        "harness_id": "id_2",
+        "CWE": "CWE-122",
+        "references": ["https://github.com/aixcc-public/challenge-004-nginx-cp/blob/main/.internal_only/cpv4/CPVINFO.md"],
+        "functions": ["ngx_http_set_browser_cookie"]
+    },
+    ".internal_only/cpv5/blobs/vuln_024.blob": {
+        "commit_introduced": "b101d59b3dda654dee1deabc34816e2ca7c96d38",
+        "src_path_rel": "src/nginx",
+        "sanitizer_id": "id_1",
+        "harness_name": "pov_harness",
+        "harness_id": "id_2",
+        "CWE": "CWE-476",
+        "references": ["https://github.com/aixcc-public/challenge-004-nginx-cp/blob/main/.internal_only/cpv5/CPVINFO.md"],
+        "functions": ["ngx_get_con_his", "ngx_http_get_last_ip_variable"]
+    },
+    ".internal_only/cpv8/blobs/vuln_027.blob": {
+        "commit_introduced": "cf6f5b1d4d85c98b4e2e2fb6f694f996d944851a",
+        "src_path_rel": "src/nginx",
+        "sanitizer_id": "id_2",
+        "harness_name": "mail_request_harness",
+        "harness_id": "id_1",
+        "CWE": "CWE-787",
+        "discovery": "easy",
+        "patching": "easy",
+        "references": ["https://github.com/aixcc-public/challenge-004-nginx-cp/blob/main/.internal_only/cpv8/CPVINFO.md"],
+        "functions": ["ngx_mail_pop3_user"]
+    },
+    ".internal_only/cpv9/blobs/vuln_028.blob": {
+        "commit_introduced": "cc4b16fc10dcc579d5f697f3ff70c390b5e7c7d2",
+        "src_path_rel": "src/nginx",
+        "sanitizer_id": "id_4",
+        "harness_name": "pov_harness",
+        "harness_id": "id_2",
+        "CWE": "CWE-416",
+        "discovery": "medium",
+        "patching": "medium",
+        "references": ["https://github.com/aixcc-public/challenge-004-nginx-cp/blob/main/.internal_only/cpv9/CPVINFO.md"],
+        "functions": ["ngx_black_list_insert", "ngx_black_list_remove", "ngx_is_ip_banned"]
+    }
+}

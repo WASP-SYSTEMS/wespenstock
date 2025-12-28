@@ -1,0 +1,219 @@
+{
+    "projects": [
+        {
+            "name": "fribidi",
+            "oss_fuzz_issue": "https://issues.oss-fuzz.com/issues/42497680",
+            "harness_name": "fribidi-fuzzer",
+            "vuln_function": "merge_with_prev",
+            "vuln_commit": "441c173cbb3562f4b89745ac2bbaaa632b4fe9f5",
+            "fixing_commit": "a2dd9351a0f21153ccdeb291c9679024c453699f",
+            "introspector_url": "https://storage.googleapis.com/oss-fuzz-introspector/fribidi/inspector-report/20250829/"
+        },
+        {
+            "name": "dovecot",
+            "oss_fuzz_issue": "https://issues.oss-fuzz.com/issues/42496818",
+            "harness_name": "fuzz-smtp-server",
+            "vuln_function": "cmd_data_destroy",
+            "vuln_commit": "829b04676ce43c1a79d4887be7173c30470c5350",
+            "fixing_commit": "9f5e723974420af0014a397bb390b57f3b9a9431",
+            "introspector_url": "https://storage.googleapis.com/oss-fuzz-introspector/dovecot/inspector-report/20250905/"
+        },
+        {
+            "name": "libdwarf",
+            "oss_fuzz_issue": "https://issues.oss-fuzz.com/issues/437060549",
+            "harness_name": "fuzz_globals",
+            "vuln_function": "dwarf_global_name_offsets",
+            "vuln_commit": "9cf5066516e5e46785bad045d97012e3c1c61b84",
+            "fixing_commit": "efa242489a69b13bc6eedc6766880335ac42d158",
+            "introspector_url": "https://storage.googleapis.com/oss-fuzz-introspector/libdwarf/inspector-report/20250921/"
+        },
+        {
+            "name": "selinux",
+            "oss_fuzz_issue": "https://issues.oss-fuzz.com/issues/428759822",
+            "harness_name": "secilc-fuzzer",
+            "vuln_function": "cil_copy_policycap",
+            "vuln_commit": "2304becd8154eeab084a7ef31b29048c0a780e84",
+            "fixing_commit": "2f2742e98ca1a4ae6c242edfa1fa0d5d178121b8",
+            "introspector_url": "https://storage.googleapis.com/oss-fuzz-introspector/selinux/inspector-report/20250921/"
+        },
+        {
+            "name": "quickjs",
+            "oss_fuzz_issue": "https://issues.oss-fuzz.com/issues/419216923",
+            "harness_name": "fuzz_eval",
+            "vuln_function": "js_parse_function_decl2",
+            "vuln_commit": "1021e3c7297cbe1f5e5f3ebbc6ee7a25b4095d52",
+            "fixing_commit": "02a2643142a0522e9e2d0d60df19e72daa84bbc3",
+            "introspector_url": "https://storage.googleapis.com/oss-fuzz-introspector/quickjs/inspector-report/20250921/"
+        },
+        {
+            "name": "quickjs",
+            "oss_fuzz_issue": "https://issues.oss-fuzz.com/issues/418569736",
+            "harness_name": "fuzz_eval",
+            "vuln_function": "js_module_loader",
+            "vuln_commit": "1021e3c7297cbe1f5e5f3ebbc6ee7a25b4095d52",
+            "fixing_commit": "f10ef299a6ab4c36c4162cc5840f128f74ec197c",
+            "introspector_url": "https://storage.googleapis.com/oss-fuzz-introspector/quickjs/inspector-report/20250921/"
+        },
+        {
+            "name": "libucl",
+            "oss_fuzz_issue": "https://issues.oss-fuzz.com/issues/406848794",
+            "harness_name": "ucl_add_string_fuzzer",
+            "vuln_function": "kh_put_ucl_hash_node",
+            "vuln_commit": "62c862f4dbc96dae418d87efeb4442858424c961",
+            "fixing_commit": null,
+            "introspector_url": "https://storage.googleapis.com/oss-fuzz-introspector/libucl/inspector-report/20250921/"
+        },
+        {
+            "name": "kamailio",
+            "oss_fuzz_issue": "https://issues.oss-fuzz.com/issues/404844413",
+            "harness_name": "fuzz_parse_msg",
+            "vuln_function": "extract_sess_version",
+            "vuln_commit": "199f13a7dfac8cd817850c6a6afe5ba510835418",
+            "fixing_commit": "cdcb570e46101703f4963863c705345c7a3420ac",
+            "introspector_url": "https://storage.googleapis.com/oss-fuzz-introspector/kamailio/inspector-report/20250921/"
+        },
+        {
+            "name": "kamailio",
+            "oss_fuzz_issue": "https://issues.oss-fuzz.com/issues/391975654",
+            "harness_name": "fuzz_parse_msg",
+            "vuln_function": "extract_mediaip",
+            "vuln_commit": "199f13a7dfac8cd817850c6a6afe5ba510835418",
+            "introspector_url": "https://storage.googleapis.com/oss-fuzz-introspector/kamailio/inspector-report/20250921/"
+        },
+        {
+            "name": "kamailio",
+            "oss_fuzz_issue": "https://issues.oss-fuzz.com/issues/391689728",
+            "harness_name": "fuzz_parse_msg",
+            "vuln_function": "extract_candidate",
+            "vuln_commit": "199f13a7dfac8cd817850c6a6afe5ba510835418",
+            "fixing_commit": "200cdb318569191cd012dfe99b252f98fe9623b9",
+            "introspector_url": "https://storage.googleapis.com/oss-fuzz-introspector/kamailio/inspector-report/20250921/"
+        },
+        {
+            "name": "inchi",
+            "oss_fuzz_issue": "https://issues.oss-fuzz.com/issues/391043585",
+            "harness_name": "inchi_input_fuzzer",
+            "vuln_function": "CtPartClear",
+            "vuln_commit": "c1435ace66f67fdff09ee79cc8d6428aa6cd427a",
+            "fixing_commit": "baaaba0d2181a8b6b2f38c194a74e6c2041c5fc8",
+            "introspector_url": "https://storage.googleapis.com/oss-fuzz-introspector/inchi/inspector-report/20250921/"
+        },
+        {
+            "name": "libbpf",
+            "oss_fuzz_issue": "https://issues.oss-fuzz.com/issues/388905046",
+            "harness_name": "bpf-object-fuzzer",
+            "vuln_function": "btf_ext_parse_info",
+            "vuln_commit": "fc064eb41e9de925beaeaf5b656ecf0f5ff83c08",
+            "fixing_commit": "71208c3362199ed08fa9fd98859ec0e821d26160",
+            "introspector_url": "https://storage.googleapis.com/oss-fuzz-introspector/libbpf/inspector-report/20250921/"
+        },
+        {
+            "name": "libdwarf",
+            "oss_fuzz_issue": "https://issues.oss-fuzz.com/issues/385742125",
+            "harness_name": "fuzz_die_cu_print",
+            "vuln_function": "_dwarf_get_abbrev_for_code",
+            "vuln_commit": "52a8e4b9bd0fe8cff9d7e7fcb8ea6682d60c45b9",
+            "fixing_commit": "375d102768ee1ff953f97a93345318db3f63ea3c",
+            "introspector_url": "https://storage.googleapis.com/oss-fuzz-introspector/libdwarf/inspector-report/20250921/"
+        },
+        {
+            "name": "h3",
+            "oss_fuzz_issue": "https://issues.oss-fuzz.com/issues/375220555",
+            "harness_name": "fuzzerPolygonToCellsExperimentalNoHoles",
+            "vuln_function": "polygonToCellsExperimental",
+            "vuln_commit": "e8b16611b582275bdb9815bc5a80e0559a811758",
+            "fixing_commit": "573ff1e7f313d468a1c6155a7f2a0961a3f0dc29",
+            "introspector_url": "https://storage.googleapis.com/oss-fuzz-introspector/h3/inspector-report/20250923/fuzz_report.html"
+        },
+        {
+            "name": "hdf5",
+            "oss_fuzz_issue": "https://issues.oss-fuzz.com/issues/42538113",
+            "harness_name": "h5_extended_fuzzer",
+            "vuln_function": "H5O__cont_decode",
+            "vuln_commit": "966454aac1231da7209ef81c11055d3312181f99",
+            "fixing_commit": "7cc8b5e1010a09c892bc97ac32d9515c3777ce07",
+            "introspector_url": "https://storage.googleapis.com/oss-fuzz-introspector/hdf5/inspector-report/20250923/fuzz_report.html"
+        },
+        {
+            "name": "inchi",
+            "oss_fuzz_issue": "https://issues.oss-fuzz.com/issues/42537903",
+            "harness_name": "inchi_input_fuzzer",
+            "vuln_function": "set_stereo_atom_parity",
+            "vuln_commit": "7cb718ffe999945fddfe43acb0cd4920ad302f67",
+            "fixing_commit": "b6551439cc02c7ec8327b00fff81b3e6e11a97fa",
+            "introspector_url": "https://storage.googleapis.com/oss-fuzz-introspector/inchi/inspector-report/20250923/fuzz_report.html"
+        },
+        {
+            "name": "hdf5",
+            "oss_fuzz_issue": "https://issues.oss-fuzz.com/issues/42537843",
+            "harness_name": "h5_extended_fuzzer",
+            "vuln_function": "H5FS__sinfo_serialize_node_cb",
+            "vuln_commit": "966454aac1231da7209ef81c11055d3312181f99",
+            "fixing_commit": "804f3bace997e416917b235dbd3beac3652a8a05",
+            "introspector_url": "https://storage.googleapis.com/oss-fuzz-introspector/hdf5/inspector-report/20250923/fuzz_report.html"
+        },
+        {
+            "name": "inchi",
+            "oss_fuzz_issue": "https://issues.oss-fuzz.com/issues/42536641",
+            "harness_name": "inchi_input_fuzzer",
+            "vuln_function": "CountTautomerGroups",
+            "vuln_commit": "923ae24a265e8c4bed2770f1b205cb0ed99ca176",
+            "fixing_commit": "ab664e42efd0bd719e7c4b473755f66cb881ae0d",
+            "introspector_url": "https://storage.googleapis.com/oss-fuzz-introspector/inchi/inspector-report/20250923/fuzz_report.html"
+        },
+        {
+            "name": "inchi",
+            "oss_fuzz_issue": "https://issues.oss-fuzz.com/issues/42535235",
+            "harness_name": "inchi_input_fuzzer",
+            "vuln_function": "RestoreAtomConnectionsSetStereo",
+            "vuln_commit": "69eaed8b8ee3d292199e3aea3fb4bd915dbce1cc",
+            "fixing_commit": "fbe4faf2bea5a8f9f589cb2f4e175544602b7a85",
+            "introspector_url": "https://storage.googleapis.com/oss-fuzz-introspector/inchi/inspector-report/20250923/fuzz_report.html"
+        },
+        {
+            "name": "inchi",
+            "oss_fuzz_issue": "https://issues.oss-fuzz.com/issues/42534760",
+            "harness_name": "inchi_input_fuzzer",
+            "vuln_function": "ParseSegmentMobileH",
+            "vuln_commit": "923ae24a265e8c4bed2770f1b205cb0ed99ca176",
+            "fixing_commit": "fbe4faf2bea5a8f9f589cb2f4e175544602b7a85",
+            "introspector_url": "https://storage.googleapis.com/oss-fuzz-introspector/inchi/inspector-report/20250923/fuzz_report.html"
+        },
+        {
+            "name": "inchi",
+            "oss_fuzz_issue": "https://issues.oss-fuzz.com/issues/42534718",
+            "harness_name": "inchi_input_fuzzer",
+            "vuln_function": "OAD_Polymer_SmartReopenCyclizedUnits",
+            "vuln_commit": "923ae24a265e8c4bed2770f1b205cb0ed99ca176",
+            "fixing_commit": "fbe4faf2bea5a8f9f589cb2f4e175544602b7a85",
+            "introspector_url": "https://storage.googleapis.com/oss-fuzz-introspector/inchi/inspector-report/20250923/fuzz_report.html"
+        },
+        {
+            "name": "selinux",
+            "oss_fuzz_issue": "https://issues.oss-fuzz.com/issues/42533606",
+            "harness_name": "binpolicy-fuzzer",
+            "vuln_function": "avtab_node_to_str",
+            "vuln_commit": "8c9d2d656b35e913f33f723aaaf90cc4ee71a335",
+            "fixing_commit": "c205b924e280c4ee161c79d2442c5026ec89597c",
+            "introspector_url": "https://storage.googleapis.com/oss-fuzz-introspector/selinux/inspector-report/20250923/fuzz_report.html"
+        },
+        {
+            "name": "selinux",
+            "oss_fuzz_issue": "https://issues.oss-fuzz.com/issues/42533596",
+            "harness_name": "binpolicy-fuzzer",
+            "vuln_function": "class_constraint_rules_to_strs",
+            "vuln_commit": "8c9d2d656b35e913f33f723aaaf90cc4ee71a335",
+            "fixing_commit": "c205b924e280c4ee161c79d2442c5026ec89597c",
+            "introspector_url": "https://storage.googleapis.com/oss-fuzz-introspector/selinux/inspector-report/20250923/fuzz_report.html"
+        },
+        {
+            "name": "wasm3",
+            "oss_fuzz_issue": "https://issues.oss-fuzz.com/issues/42531785",
+            "harness_name": "fuzzer",
+            "vuln_function": "CompileBlock",
+            "vuln_commit": "6348cbc59d346ce26cc57c4bf7e6f235e73e7936",
+            "fixing_commit": null,
+            "introspector_url": "https://storage.googleapis.com/oss-fuzz-introspector/wasm3/inspector-report/20250924/fuzz_report.html"
+        }
+    ]
+}

@@ -1,0 +1,89 @@
+{
+    "projects": [
+        {
+            "name": "libmodbus",
+            "introspector_url": "https://storage.googleapis.com/oss-fuzz-introspector/libmodbus/inspector-report/20250829/",
+            "harness_names": ["FuzzServer", "FuzzClient"]
+        },
+        {
+            "name": "inih",
+            "introspector_url": "https://storage.googleapis.com/oss-fuzz-introspector/inih/inspector-report/20250829/",
+            "harness_names": ["inihfuzz"]
+        },
+        {
+            "name": "libfuse",
+            "introspector_url": "https://storage.googleapis.com/oss-fuzz-introspector/libfuse/inspector-report/20250829/",
+            "harness_names": ["fuzz_optparse"]
+        },
+        {
+            "name": "utf8proc",
+            "introspector_url": "https://storage.googleapis.com/oss-fuzz-introspector/utf8proc/inspector-report/20250829/",
+            "harness_names": ["utf8proc_fuzzer"]
+        },
+        {
+            "name": "hwloc",
+            "introspector_url": "https://storage.googleapis.com/oss-fuzz-introspector/hwloc/inspector-report/20250829/",
+            "harness_names": ["hwloc_fuzzer"]
+        },
+        {
+            "name": "lighttpd",
+            "introspector_url": "https://storage.googleapis.com/oss-fuzz-introspector/lighttpd/inspector-report/20250829/",
+            "harness_names": ["fuzz_burl"]
+        },
+        {
+            "name": "fribidi",
+            "introspector_url": "https://storage.googleapis.com/oss-fuzz-introspector/fribidi/inspector-report/20250829/",
+            "harness_names": ["fribidi-fuzzer"]
+        },
+        {
+            "name": "cgif",
+            "introspector_url": "https://storage.googleapis.com/oss-fuzz-introspector/cgif/inspector-report/20250829/",
+            "harness_names": ["cgif_fuzzer", "cgif_rgb_fuzzer", "cgif_file_fuzzer"]
+        },
+        {
+            "name": "libcue",
+            "introspector_url": "https://storage.googleapis.com/oss-fuzz-introspector/libcue/inspector-report/20250829/",
+            "harness_names": ["fuzz"]
+        },
+        {
+            "name": "cpuinfo",
+            "introspector_url": "https://storage.googleapis.com/oss-fuzz-introspector/cpuinfo/inspector-report/20250829/",
+            "harness_names": ["fuzz_cpuinfo"]
+        },
+        {
+            "name": "numactl",
+            "introspector_url": "https://storage.googleapis.com/oss-fuzz-introspector/numactl/inspector-report/20250829/",
+            "harness_names": ["fuzz_parse_str"]
+        },
+        {
+            "name": "jq",
+            "introspector_url": "https://storage.googleapis.com/oss-fuzz-introspector/jq/inspector-report/20250905/",
+            "harness_names": ["jq_fuzz_parse"]
+        },
+        {
+            "name": "dovecot",
+            "introspector_url": "https://storage.googleapis.com/oss-fuzz-introspector/dovecot/inspector-report/20250905/",
+            "harness_names": ["fuzz-imap-utf7"]
+        },
+        {
+            "name": "apache-httpd",
+            "introspector_url": "https://storage.googleapis.com/oss-fuzz-introspector/apache-httpd/inspector-report/20250905/",
+            "harness_names": ["fuzz_addr_parse", "fuzz_request", "fuzz_tokenize", "fuzz_parse"]
+        },
+        {
+            "name": "libconfig",
+            "introspector_url": "https://storage.googleapis.com/oss-fuzz-introspector/libconfig/inspector-report/20250905/",
+            "harness_names": ["config_read_fuzzer"]
+        },
+        {
+            "name": "libcue",
+            "introspector_url": "https://storage.googleapis.com/oss-fuzz-introspector/libcue/inspector-report/20250905/",
+            "harness_names": ["fuzz"]
+        },
+        {
+            "name": "opensips",
+            "introspector_url": "https://storage.googleapis.com/oss-fuzz-introspector/opensips/inspector-report/20250905/",
+            "harness_names": ["fuzz_csv_parser", "fuzz_uri_parser", "fuzz_core_funcs", "fuzz_msg_parser"]
+        }
+    ]
+}
