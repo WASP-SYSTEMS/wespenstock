@@ -82,7 +82,7 @@ class CrsContextBase(BaseModel):
 
     vulnerabilities: list[Vulnerability] = []
 
-    viewed_files: list[Path] = []  # List of viewed files across all agents
+    viewed_files: list[Path]  # List of viewed files across all agents
 
     save_to: Path | None
 

@@ -105,6 +105,7 @@ class CrsPreContext(BaseModel):
             proj_yaml_model=project_yaml,
             comp_env=comp_env,
             save_to=self.state_file_save,
+            viewed_files=[],
         )
 
         state_data = self.state_data
@@ -118,7 +119,9 @@ class CrsPreContext(BaseModel):
             for vuln in state_data["vulnerabilities"]:
                 vuln_update.append({k.value: vuln[k.value] for k in apply_state if vuln.get(k.value)})
 
-            result = CrsContext.model_validate(result.model_dump() | {"vulnerabilities": vuln_update})
+            result = CrsContext.model_validate(
+                result.model_dump() | {"vulnerabilities": vuln_update, "viewed_files": state_data["viewed_files"]}
+            )
 
         log.info(f"Working on context:\n{result.model_dump_json(indent=2)}")
 
