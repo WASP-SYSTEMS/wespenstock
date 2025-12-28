@@ -158,7 +158,6 @@ def get_available_models() -> list[dict[str, Any]]:
             "litellm_params": {
                 "model": "anthropic/claude-sonnet-4-20250514",
                 "api_key": ANTHROPIC_API_KEY.get() or "<not set>",
-                "default_temperature": 0.0,
             },
         },
         # Ollama-hosted models
