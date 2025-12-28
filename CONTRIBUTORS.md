@@ -1,2 +1,3 @@
 - Maxim Shevchishin
 - Mischa Meier
+- Veit Eysholdt
