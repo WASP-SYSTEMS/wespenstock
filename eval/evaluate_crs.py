@@ -266,8 +266,11 @@ def log_eval_run(
     )
     print(log_entry)
     if logfile:
-        with open(logfile, "a", encoding="UTF-8") as f:
-            f.write(log_entry)
+        try:
+            with open(logfile, "a", encoding="UTF-8") as f:
+                f.write(log_entry)
+        except Exception:  # pylint: disable=broad-exception-caught
+            print(f"Something went wrong while logging execution @{logfile}")
 
 
 def resolve_template_path(provided_path: str) -> Path:
