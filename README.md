@@ -34,7 +34,7 @@ pip install -e '.[dev]'
 
 Once the CRS is installed into a venv, invoke it using the `run_crs` command with that venv active.
 
-The first CLI argument is the mode of operation. If can be one of:
+The first CLI argument is the mode of operation. It can be one of:
 
 - `analyze`: Run the analyzer agent only.
 - `pov`: Run the PoV builder agent only.
@@ -59,7 +59,7 @@ The following options can/should/must be passed:
   Once a step is done, it adds its result to this file.
   For the single-agent modes of operation, this and/or `--load-file` must be given.
 
-- `--load-state <NAME>.json>`: If given, the previous-run state is read from this file instead of `--state-file`.
+- `--load-state <NAME>.json`: If given, the previous-run state is read from this file instead of `--state-file`.
   This allows easily restarting an agent using the same state multiple times.
 
 ### Choosing a project to test
@@ -103,7 +103,7 @@ Depending on the LLMs you are using, you must/should set one or more of the foll
 
 This CRS consists of three agents:
 
-- `AnalyzerAgent`: Analyzes one commit or function and outputs a description of the vulnerability if it founds one.
+- `AnalyzerAgent`: Analyzes one commit or function and outputs a description of the vulnerability if it finds one.
 - `PovBuilderAgent`: Constructs a _verified_ reproducer based on the description from the analyzer.
 - `PatcherAgent`: Produces a patch.
 
@@ -120,7 +120,7 @@ pip install -e '.[dev]'
 ### Pre-commit
 
 You can install the pre-commit hooks using `pre-commit install` in the base directory of the project.
-This will run code foramtting and other things before you commit your file, ensuring a base quality of your code before committing.
+This will run code formatting and other things before you commit your file, ensuring a base quality of your code before committing.
 
 ```sh
 # install pre-commit hooks that run before each commit
