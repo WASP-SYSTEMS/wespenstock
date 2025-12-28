@@ -1,4 +1,5 @@
 - Julian Steffen
 - Maxim Shevchishin
 - Mischa Meier
+- Niklas Steffen
 - Veit Eysholdt
