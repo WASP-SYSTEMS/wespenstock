@@ -36,7 +36,8 @@ pip install -e '.[dev]'
 
 ### Minimal execution example
 To run the CRS against 3 vulnerable nginx functions, you could use the CRS evaluation script as follows:
-```export ANTHROPIC_API_KEY=<YOUR API KEY>
+```
+export ANTHROPIC_API_KEY=<YOUR API KEY>
 eval_crs -f --model claude-sonnet-4-20250514 --json nginx-top3.json
 ```
 You can use any model defined in `crs/base/model_list.py`. However, make sure that all necessary exports are set.
