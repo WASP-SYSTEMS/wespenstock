@@ -4,6 +4,10 @@ The WASPS Cyber Reasoning System — AI-driven bug discovery and fixing since 20
 
 ## Running
 
+> [!CAUTION]
+> When running the verifier, the LLM-generated code will be executed on your system! This may have catastrophic side effects.
+> Pull requests welcome.
+
 The challenge project (CP) to operate upon is specified using command-line arguments.
 Various other [configuration knobs](#settings) can be adjusted using environment variables and CLI options.
 
