@@ -1,6 +1,7 @@
 - Annika Kuntze
 - Christoph Geron
 - Julian Steffen
+- Maximilian Leiwig
 - Maxim Shevchishin
 - Mischa Meier
 - Niklas Steffen
